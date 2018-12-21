@@ -16,6 +16,7 @@ import org.springframework.stereotype.Component;
 public class MinimumSwapsLogic {
 
     public String resolvMinimumSwaps(MinimumSwapsModel data) {
+        
         int swap = 0;
         
         boolean visited[] = new boolean[data.getSize()];
