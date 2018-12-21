@@ -16,6 +16,9 @@ import org.springframework.stereotype.Component;
  */
 @Component
 public class TwoStringsLogic {
+    
+    private static String YES="YES";
+    private static String NO="NO";
 
     public List<String> resolveStrings(StringsModel data) {
         int index=0;
@@ -38,7 +41,7 @@ public class TwoStringsLogic {
                         ? data.getListStrings().get(index)
                         : data.getListStrings().get(index+1));
             }
-            listResult.add(result ? "YES" : "NO");
+            listResult.add(result ? YES : NO);
             index = index+2;
 
         }
@@ -47,7 +50,7 @@ public class TwoStringsLogic {
     }
 
     private boolean validate(String shortString, String longString) {
-       System.out.println("shortString -> "+shortString);
+       
         if(shortString.length() == 0){
             return false;
         }
