@@ -17,6 +17,7 @@ public class MinimumSwapsLogic {
 
     public String resolvMinimumSwaps(MinimumSwapsModel data) {
         int swap = 0;
+        
         boolean visited[] = new boolean[data.getSize()];
 
         for (int i = 0; i < data.getSize(); i++) {
